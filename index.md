@@ -52,7 +52,7 @@ For your second milestone, explain what you've worked on since your previous mil
 
 First, I assembled my Raspberry Pi into its case, wired up its fan, and connected the ArduCam. Then I opened the terminal and expanded the necessary libraries for image recognition. The two most significant libraries were Tensorflow Lite and OpenCV. TensorFlow is open-source software for machine learning and artificial intelligence, but I installed TensorFlow Lite as it was more compatible with smaller Edge devices such as my Raspberry Pi 4B. After installing everything, I could complete a simple image detection using OpenCV. This preliminary code will take in an image as an input and output the image with a box around the desired object we want to detect, which is a sign.
 
-# Code
+# First milestone code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
@@ -67,7 +67,7 @@ void loop() {
 
 }
 ```
-# First milestone code
+# Second milestone code
 goober.
 
 ```c++
@@ -82,6 +82,8 @@ void loop() {
 
 }
 ```
+# Third milestone code
+goober.
 ```c++
 void setup() {
   // put your setup code here, to run once:
