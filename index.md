@@ -67,6 +67,33 @@ void loop() {
 
 }
 ```
+# First milestone code
+goober.
+
+```c++
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  Serial.println("Hello World!");
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
+```
+```c++
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  Serial.println("Hello World!");
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
+```
 
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, copy and paste the example rows below.
