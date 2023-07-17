@@ -1,11 +1,6 @@
 # Aarav Jain - Image Recognition with Raspberry Pi
-Welcome to my image recognition project! With the use of the OpenCV library, I've created a system that achieves three different milestones. In my initial breakthrough, I used a a simple OpenCV cascade classifier for image detection. The second milestone truly showcases the wonders of OpenCV, as it not only identifies objects placed in front of the camera but also outlines and labels them with precision. However, my most complex and greatest achievement lies in the third milestone, where the camera, upon detecting a person, sends me an email with a personalized message and an attached picture of the identified individual.
+Welcome to my image recognition project! Using the OpenCV library, I've created a system achieving three milestones. In my initial breakthrough, I used a a simple OpenCV cascade classifier for image detection. The second milestone truly showcases the wonders of OpenCV, as it identifies objects placed in front of the camera and outlines and labels them precisely. However, my most complex and greatest achievement lies in the third milestone, where the camera, upon detecting a person, sends me an email with a personalized message and an attached picture of the identified individual.
 
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
 
 | **Name** | **School** | **Field** | **Grade** |
 |:--:|:--:|:--:|:--:|
