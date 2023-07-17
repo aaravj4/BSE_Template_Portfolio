@@ -1,5 +1,5 @@
 # Aarav Jain - Image Recognition with Raspberry Pi
-Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!
+Welcome to my image recognition project! With the use of the OpenCV library, I've created a system that achieves three different milestones. In my initial breakthrough, I used a a simple OpenCV cascade classifier for image detection. The second milestone truly showcases the wonders of OpenCV, as it not only identifies objects placed in front of the camera but also outlines and labels them with precision. However, my most complex and greatest achievement lies in the third milestone, where the camera, upon detecting a person, sends me an email with a personalized message and an attached picture of the identified individual.
 
 You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
 ```HTML 
@@ -50,10 +50,10 @@ For your second milestone, explain what you've worked on since your previous mil
 **-------------------------------------------------------------------------------------------------------------------------------------------------------**
 
 
-First, I assembled my Raspberry Pi into its case, wired up its fan, and connected the ArduCam. Then I opened the terminal and expanded the necessary libraries for image recognition. The two most significant libraries were Tensorflow Lite and OpenCV. TensorFlow is open-source software for machine learning and artificial intelligence, but I installed TensorFlow Lite as it was more compatible with smaller Edge devices such as my Raspberry Pi 4B. After installing everything, I could complete a simple image detection using OpenCV. This preliminary code will take in an image as an input and output the image with a box around the desired object we want to detect, which is a sign.
+First, I assembled my Raspberry Pi into its case, wired up its fan, and connected the ArduCam. Then I opened the terminal and expanded the necessary libraries for image recognition. The two most significant libraries were Tensorflow Lite and OpenCV. TensorFlow is open-source software for machine learning and artificial intelligence, but I installed TensorFlow Lite as it was more compatible with smaller Edge devices such as my Raspberry Pi 4B. After installing everything, I could complete a simple image detection using OpenCV. However, I ran into some problems. Though OpenCV was installed completely ad successfully, when I tried to import the library into my code. I redownloaded OpenCV multiple times with multiple different versions of it, but the error was persistent. After a few days, I installed OpenCV on another computer, and importing OpenCV also worked. Then, I wrote code that used a Cascade Classifier object from OpenCV to complete an image detection for faces.
 
-# First milestone code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
+# First milestone code : Image detection with OpenCV
+This preliminary code uses the libraries OpenCV(import cv2) and matplotlib, specifically pyplot(from matplotlib import pyplot as plt), to detect faces within a frame. The code first uses OpenCV to read an image, then converts the image to a grayscale and then an RGB format. It then creates a Cascade Classifier, a model trained on data consisting of positives(where the target is detected) and negatives(without the target). Once this Cascade Classifier finds a face, the code uses OpenCV to create a rectangle around the face that was identified. Then pyplot is used to display the image with completed detection. I also modified the Cascade classifier to detect 
 
 ```c++
 import cv2
@@ -62,14 +62,11 @@ img = cv2.imread("street_with_people.jpg")
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 stop_data = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-found = stop_data.detectMultiScale(img_gray,
-								minSize =(20, 20))
+found = stop_data.detectMultiScale(img_gray,minSize =(20, 20))
 amount_found = len(found)
 if amount_found != 0:
 	for (x, y, width, height) in found:
-		cv2.rectangle(img_rgb, (x, y),
-					(x + height, y + width),
-					(0, 255, 0), 5)
+		cv2.rectangle(img_rgb, (x, y),(x + height, y + width),(0, 255, 0), 5)
 plt.subplot(1, 1, 1)
 plt.imshow(img_rgb)
 plt.show()
@@ -106,7 +103,7 @@ void loop() {
 ```
 
 # What you need:
-All you need for an image recognition project like this is a computer compatible with Python 3.6 or later(for OpenCV), which should have a working camera.
+All you need for an image recognition project like this is a computer compatible with Python 3.6 or later(for OpenCV), which should have a working camera. A cheap option for this would be a Raspberry Pi 4 B, which can handle a library like OpenCV.
 
 | **Part** | **What the item is used for** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
