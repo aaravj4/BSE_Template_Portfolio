@@ -46,8 +46,9 @@ For your second milestone, explain what you've worked on since your previous mil
 First, I assembled my Raspberry Pi into its case, wired up its fan, and connected the ArduCam. Then I opened the terminal and expanded the necessary libraries for image recognition. The two most significant libraries were Tensorflow Lite and OpenCV. TensorFlow is open-source software for machine learning and artificial intelligence, but I installed TensorFlow Lite as it was more compatible with smaller Edge devices such as my Raspberry Pi 4B. After installing everything, I could complete a simple image detection using OpenCV. However, I ran into some problems. Though OpenCV was installed completely ad successfully, when I tried to import the library into my code. I redownloaded OpenCV multiple times with multiple different versions of it, but the error was persistent. After a few days, I installed OpenCV on another computer, and importing OpenCV also worked. Then, I wrote code that used a Cascade Classifier object from OpenCV to complete an image detection for faces.
 
 ![Headstone Image](faces.png)
+![Headstone Image](stop_sign.png)
 
-# First milestone code : Image detection with OpenCV
+# First milestone code: Image detection with OpenCV
 This preliminary code uses the libraries OpenCV(import cv2) and matplotlib, specifically pyplot(from matplotlib import pyplot as plt), to detect faces within a frame. The code first uses OpenCV to read an image, then converts the image to a grayscale and then an RGB format. It then creates a Cascade Classifier, a model trained on data consisting of positives(where the target is detected) and negatives(without the target). Once this Cascade Classifier finds a face, the code uses OpenCV to create a rectangle around the face that was identified. Then pyplot is used to display the image with completed detection. I also modified the Cascade classifier to detect stop signs in an image, which was also successful.
 
 ```c++
@@ -68,19 +69,33 @@ plt.show()
 
 ```
 # Second milestone code
-goober.
-
+This code runs a simple image recognition on a live video using OpenCV and cvlib. First, it creates a video using the VideoCaputre function in OpenCV. Then, using a while loop, it reads through the video frame by frame, runs it against a function from cvlib, which detects common objects, and assigns it a label and box. It then creates an output image that draws a box, labels around the detected object, and outputs the final image.
 ```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
-}
+import cv2
+import cvlib as cv
+from cvlib.object_detection import draw_bbox
+video = cv2.VideoCapture(0)
 
-void loop() {
-  // put your main code here, to run repeatedly:
+while True:
+    ret, frame = video.read()
+    #print(frame)
+    bbox, label_, conf = cv.detect_common_objects(aframe)
+    # print(label_)
+    try:
+        output_image = draw_bbox(frame, bbox, label_, conf)
+    except ValueError as e:
+        output_image = frame
+        print(e)
+    cv2.imshow('Object_Detection',output_image)
 
-}
+    if cv2.waitKey(1) & 0xFF == ord("q"):
+        break
+
+
+
+
+
+
 ```
 # Third milestone code
 goober.
