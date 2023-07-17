@@ -98,8 +98,7 @@ void loop() {
 ```
 
 # Bill of Materials
-Here's where you'll list the parts in your project. To add more rows, copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
+All you need for an image recognition project like this
 
 | **Part** | **What the item is used for** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
@@ -107,10 +106,4 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Arducam 5MP camera for Raspberry Pi | Vision System for main computer | $9.99 | <a href="https://amazon.com/Arducam-Megapixels-Sensor-OV5647-Raspberry/dp/B012V1HEP4/ref=sr_1_4?crid=1JGGZIPZ3VMI&keywords=arducam+5mp+camera+for+raspberry+pi&qid=1689089428&sprefix=%2Caps%2C215&sr=8-4"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 
-# Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
 
-To watch the BSE tutorial on how to create a portfolio, click here.
