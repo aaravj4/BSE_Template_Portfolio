@@ -56,16 +56,24 @@ First, I assembled my Raspberry Pi into its case, wired up its fan, and connecte
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
-}
+import cv2
+from matplotlib import pyplot as plt
+img = cv2.imread("street_with_people.jpg")
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+stop_data = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+found = stop_data.detectMultiScale(img_gray,
+								minSize =(20, 20))
+amount_found = len(found)
+if amount_found != 0:
+	for (x, y, width, height) in found:
+		cv2.rectangle(img_rgb, (x, y),
+					(x + height, y + width),
+					(0, 255, 0), 5)
+plt.subplot(1, 1, 1)
+plt.imshow(img_rgb)
+plt.show()
 
-void loop() {
-  // put your main code here, to run repeatedly:
-
-}
 ```
 # Second milestone code
 goober.
@@ -97,13 +105,13 @@ void loop() {
 }
 ```
 
-# Bill of Materials
-All you need for an image recognition project like this
+# What you need:
+All you need for an image recognition project like this is a computer compatible with Python 3.6 or later(for OpenCV), which should have a working camera.
 
 | **Part** | **What the item is used for** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
 | Raspberry Pi 4B Kit | Main computer that runs all code along with its peripherals | $129.99 | <a href="https://www.amazon.com/CanaKit-Raspberry-Pi-Starter-Kit/dp/B07V2B4W63/ref=sr_1_6?crid=2JJGD2DHT0K12&keywords=canakit+raspberry+pi+4&qid=1689089184&sprefix=canakit%2Caps%2C696&sr=8-6"> Link </a> |
 | Arducam 5MP camera for Raspberry Pi | Vision System for main computer | $9.99 | <a href="https://amazon.com/Arducam-Megapixels-Sensor-OV5647-Raspberry/dp/B012V1HEP4/ref=sr_1_4?crid=1JGGZIPZ3VMI&keywords=arducam+5mp+camera+for+raspberry+pi&qid=1689089428&sprefix=%2Caps%2C215&sr=8-4"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+
 
 
