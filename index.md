@@ -16,6 +16,7 @@ Welcome to my image recognition project! Using the OpenCV library, I've created 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+
 For your final milestone, explain the outcome of your project. Key details to include are:
 - What you've accomplished since your previous milestone
 - What your biggest challenges and triumphs were at BSE
@@ -30,9 +31,6 @@ For your final milestone, explain the outcome of your project. Key details to in
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-**-------------------------------------------------------------------------------------------------------------------------------------------------------**
-
-
 For my second milestone, I used OpenCV to recognize and identify different common objects and then put a box and label around them. The code uses the OpenCV VideoCapture function, which begins taking a video from my camera. Using a while loop, the program can look. At each frame of my camera video, and then apply a function that detects common objects. The program works fairly well and can recognize many different objects.
 
 ![Headstone Image](IMG_2880.png)
@@ -41,10 +39,8 @@ For my second milestone, I used OpenCV to recognize and identify different commo
 
 # First Milestone: Simple Image Detection Using OpenCV
 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                                                                  
-
-**-------------------------------------------------------------------------------------------------------------------------------------------------------**
-
 
 First, I assembled my Raspberry Pi into its case, wired up its fan, and connected the ArduCam. Then I opened the terminal and expanded the necessary libraries for image recognition. The two most significant libraries were Tensorflow Lite and OpenCV. TensorFlow is open-source software for machine learning and artificial intelligence, but I installed TensorFlow Lite as it was more compatible with smaller Edge devices such as my Raspberry Pi 4B. After installing everything, I could complete a simple image detection using OpenCV. However, I ran into some problems. Though OpenCV was installed successfully when I tried to import the library into my code. I redownloaded OpenCV multiple times with multiple different versions of it, but the error was persistent. After a few days, I installed OpenCV on another computer, and importing OpenCV also worked. Then, I wrote code that used a Cascade Classifier object from OpenCV to complete image detection for faces.
 
