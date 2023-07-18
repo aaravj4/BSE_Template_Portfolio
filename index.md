@@ -1,4 +1,4 @@
-# Aarav Jain - Image Recognition with Raspberry Pi
+# Aarav Jain - Image Recognition using OpenCV
 Welcome to my image recognition project! Using the OpenCV library, I've created a system achieving three milestones. In my initial breakthrough, I used a a simple OpenCV cascade classifier for image detection. The second milestone truly showcases the wonders of OpenCV, as it identifies objects placed in front of the camera and outlines and labels them precisely. However, my most complex and greatest achievement lies in the third milestone, where the camera, upon detecting a person, sends me an email with a personalized message and an attached picture of the identified individual.
 
 
@@ -6,11 +6,11 @@ Welcome to my image recognition project! Using the OpenCV library, I've created 
 |:--:|:--:|:--:|:--:|
 | Aarav J | Amador Valley High School | Electrical Engineering and Computer Science | Incoming Junior
 
-**Replace the BlueStamp logo below with an image of yourself and your competed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
+**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
 ![Headstone Image](logo.svg)
   
-# Image Recognition in a Video With Email Feature
+# Final Milestone: Image Recognition in a Video With Email Feature
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
@@ -26,15 +26,9 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 # Second Milestone: Image Recognition in a Video
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+For my second milestone, I used OpenCV to recognize and identify different common objects and then put a box and label around them. The code uses the OpenCV VideoCapture function, which begins taking a video from my camera. Using a while loop, the program can look. At each frame of my camera video, and then apply a function that detects common objects. The program works fairly well and can recognize many different objects.
 
 # First Milestone: Simple Image Detection Using OpenCV
 
@@ -43,7 +37,7 @@ For your second milestone, explain what you've worked on since your previous mil
 **-------------------------------------------------------------------------------------------------------------------------------------------------------**
 
 
-First, I assembled my Raspberry Pi into its case, wired up its fan, and connected the ArduCam. Then I opened the terminal and expanded the necessary libraries for image recognition. The two most significant libraries were Tensorflow Lite and OpenCV. TensorFlow is open-source software for machine learning and artificial intelligence, but I installed TensorFlow Lite as it was more compatible with smaller Edge devices such as my Raspberry Pi 4B. After installing everything, I could complete a simple image detection using OpenCV. However, I ran into some problems. Though OpenCV was installed completely ad successfully, when I tried to import the library into my code. I redownloaded OpenCV multiple times with multiple different versions of it, but the error was persistent. After a few days, I installed OpenCV on another computer, and importing OpenCV also worked. Then, I wrote code that used a Cascade Classifier object from OpenCV to complete an image detection for faces.
+First, I assembled my Raspberry Pi into its case, wired up its fan, and connected the ArduCam. Then I opened the terminal and expanded the necessary libraries for image recognition. The two most significant libraries were Tensorflow Lite and OpenCV. TensorFlow is open-source software for machine learning and artificial intelligence, but I installed TensorFlow Lite as it was more compatible with smaller Edge devices such as my Raspberry Pi 4B. After installing everything, I could complete a simple image detection using OpenCV. However, I ran into some problems. Though OpenCV was installed successfully when I tried to import the library into my code. I redownloaded OpenCV multiple times with multiple different versions of it, but the error was persistent. After a few days, I installed OpenCV on another computer, and importing OpenCV also worked. Then, I wrote code that used a Cascade Classifier object from OpenCV to complete image detection for faces.
 
 ![Headstone Image](faces.png)
 ![Headstone Image](stop_sign.png)
@@ -69,7 +63,7 @@ plt.show()
 
 ```
 # Second milestone code
-This code runs a simple image recognition on a live video using OpenCV and cvlib. First, it creates a video using the VideoCaputre function in OpenCV. Then, using a while loop, it reads through the video frame by frame, runs it against a function from cvlib, which detects common objects, and assigns it a label and box. It then creates an output image that draws a box, labels around the detected object, and outputs the final image.
+This code runs a simple image recognition on a live video using OpenCV and cvlib. First, it creates a video using the VideoCaputre function in OpenCV. Then, using a while loop, it reads through the video frame by frame and runs it against a function from cvlib, which detects common objects and assigns them a label and box. It then creates an output image that draws a box, labels around the detected object, and outputs the final image.
 ```c++
 import cv2
 import cvlib as cv
@@ -92,7 +86,7 @@ while True:
         break
 ```
 # Third milestone code
-The third milestone code is the same as the second milestone code except for the fact that it integrates an emailing system that sends an email to me every time a person is detected in front of my camera. We can create this email using a MIMEMultipart object which is created in a method 'email_new' that takes in a subject, message, and image as arguments. As soon as the label is equal to 'person', the email sends a message and an attachment of the person.
+The third milestone code is the same as the second one except that it integrates an emailing system that sends an email to me every time a person is detected in front of my camera. We can create this email using a MIMEMultipart object created in a method 'email_new' that takes in a subject, message, and image as arguments. As soon as the label is equal to 'person,' the email sends a message and an attachment of the person.
 ```c++
 import cv2
 import cvlib as cv
