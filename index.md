@@ -26,9 +26,18 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 # Second Milestone: Image Recognition in a Video
 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+
+**-------------------------------------------------------------------------------------------------------------------------------------------------------**
+
+
 For my second milestone, I used OpenCV to recognize and identify different common objects and then put a box and label around them. The code uses the OpenCV VideoCapture function, which begins taking a video from my camera. Using a while loop, the program can look. At each frame of my camera video, and then apply a function that detects common objects. The program works fairly well and can recognize many different objects.
+
+![Headstone Image](IMG_2880.png)
+
+
 
 # First Milestone: Simple Image Detection Using OpenCV
 
