@@ -1,5 +1,5 @@
 # Aarav Jain - Image Recognition using OpenCV
-Welcome to my image recognition project! Using the OpenCV library, I've created a system achieving three milestones. In my initial breakthrough, I used a a simple OpenCV cascade classifier for image detection. The second milestone truly showcases the wonders of OpenCV, as it identifies objects placed in front of the camera and outlines and labels them precisely. However, my most complex and greatest achievement lies in the third milestone, where the camera, upon detecting a person, sends me an email with a personalized message and an attached picture of the identified individual.
+Welcome to my image recognition project! Using the OpenCV library, I've created a system achieving three milestones. In my initial breakthrough, I used a simple OpenCV cascade classifier for image detection. The second milestone truly showcases the wonders of OpenCV, as it identifies objects placed in front of the camera and outlines and labels them precisely. However, my most complex and greatest achievement lies in the third milestone, where the camera, upon detecting a person, sends me an email with a personalized message and an attached picture of the identified individual.
 
 
 | **Name** | **School** | **Field** | **Grade** |
@@ -12,7 +12,7 @@ Welcome to my image recognition project! Using the OpenCV library, I've created 
   
 # Final Milestone: Image Recognition in a Video With Email Feature
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+The final milestone has an added functionality to the second milestone, which is an email function. I created a method using a MIMEMultipart object to email myself. The email will only send if a person is in the camera, and once there is, I will be emailed a message saying a person was detected in front of your camera. I also furthered its
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -47,7 +47,7 @@ First, I assembled my Raspberry Pi into its case, wired up its fan, and connecte
 ![Headstone Image](faces.png)
 ![Headstone Image](stop_sign.png)
 
-# First milestone code: Image detection with OpenCV
+# First milestone code
 This preliminary code uses the libraries OpenCV(import cv2) and matplotlib, specifically pyplot(from matplotlib import pyplot as plt), to detect faces within a frame. The code first uses OpenCV to read an image, then converts the image to a grayscale and then an RGB format. It then creates a Cascade Classifier, a model trained on data consisting of positives(where the target is detected) and negatives(without the target). Once this Cascade Classifier finds a face, the code uses OpenCV to create a rectangle around the face that was identified. Then pyplot is used to display the image with completed detection. I also modified the Cascade classifier to detect stop signs in an image, which was also successful.
 
 ```c++
