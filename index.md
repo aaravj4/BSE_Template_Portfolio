@@ -41,7 +41,8 @@ For my second milestone, I used OpenCV to recognize and identify different commo
 # First Milestone: Simple Image Detection Using OpenCV
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                                                                  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ygXnN_RUzTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <hr>
 
 First, I assembled my Raspberry Pi into its case, wired up its fan, and connected the ArduCam. Then I opened the terminal and expanded the necessary libraries for image recognition. The two most significant libraries were Tensorflow Lite and OpenCV. TensorFlow is open-source software for machine learning and artificial intelligence, but I installed TensorFlow Lite as it was more compatible with smaller Edge devices such as my Raspberry Pi 4B. After installing everything, I could complete a simple image detection using OpenCV. However, I ran into some problems. Though OpenCV was installed successfully when I tried to import the library into my code. I redownloaded OpenCV multiple times with multiple different versions of it, but the error was persistent. After a few days, I installed OpenCV on another computer, and importing OpenCV also worked. Then, I wrote code that used a Cascade Classifier object from OpenCV to complete image detection for faces.
