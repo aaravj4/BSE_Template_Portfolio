@@ -18,6 +18,8 @@ Welcome to my image recognition project! Using the OpenCV library, I've created 
 
 The final milestone has an added functionality to the second milestone, which is an email function. I created a method using a MIMEMultipart object to email myself. The email will only send if a person is in the camera, and once there is, I will be emailed a message saying a person was detected in front of your camera. I also furthered its capabilities by attaching a picture of the person detected in the camera to the email.
 
+![Headstone Image](Screenshot 2023-07-18 081121.png)
+
 
 
 
