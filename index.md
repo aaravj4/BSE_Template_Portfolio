@@ -55,7 +55,8 @@ First, I assembled my Raspberry Pi into its case, wired up its fan, and connecte
 <div align="center">
   <img src="faces.png" width="560">
 </div>
-&nbsp
+
+
 <div align="center">
   <img src="stop_sign.png" width="560">
 </div>
