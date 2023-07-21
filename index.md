@@ -37,11 +37,11 @@ The final milestone has an added functionality to the second milestone, which is
 For my second milestone, I used OpenCV to recognize and identify different common objects and then put a box and label around them. The code uses the OpenCV VideoCapture function, which begins taking a video from my camera. Using a while loop, the program can look. At each frame of my camera video, and then apply a function that detects common objects. The program works fairly well and can recognize many different objects.
 
 <div align="center">
-  <img src="cup" width="560">
+  <img src="cup.png" width="560">
 </div>
 
 <div align="center">
-  <img src="phone" width="560">
+  <img src="phone.png" width="560">
 </div>
 
 
