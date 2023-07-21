@@ -125,8 +125,8 @@ import html
 flag = 0
 video = cv2.VideoCapture(0)
 sender = "jainaarav100@outlook.com"
-recipient = "jainaarav100@outlook.com"
-password = "SCkd304!!"
+recipient = "[Enter Here]"
+password = "[Enter Here]"
 
 def email_new(subject, msg, image):
     message = MIMEMultipart()
