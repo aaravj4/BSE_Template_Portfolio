@@ -6,9 +6,6 @@ Welcome to my image recognition project! Using the OpenCV library, I've created 
 |:--:|:--:|:--:|:--:|
 | Aarav J | Amador Valley High School | Electrical Engineering and Computer Science | Incoming Junior
 
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
-
-![Headstone Image](logo.svg)
   
 # Final Milestone: Image Recognition in a Video With Email Feature
 
